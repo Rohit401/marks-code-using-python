@@ -1,0 +1,83 @@
+class Job:
+    def secondary(self): 
+        self.user = input('enter the percentage' )
+        self.uu = 'the perc'
+        self.fun11()
+        if int(self.user) >= 90:
+            self.fun1()
+    def fun1(self):
+        self.user = input('enter intermediate percentage')
+        self.uu = 'the inter'
+        self.fun11()
+        #with open('rrr.txt', 'a') as q:
+            #q.write(user)
+        if int(self.user) >= 70:
+            self.user = input('enter tech degree')
+            self.uu = 'the tech degree'
+            self.fun11()
+            #with open('rrr.txt', 'a') as q:
+                #q.write(user)
+            listt = ['cse','it']
+            li = ['ece', 'eee', 'mec', 'civil']
+
+            if self.user in listt:
+                self.fun3()
+
+
+            elif self.user in li:
+                self.user = int(input('enter pg percentage'))
+                self.uu = 'the pg percentage'
+                self.fun11()
+                if self.user >= 55:
+                    print('in waiting list 4')
+                else:
+
+                    pass
+
+
+    def fun2(self):
+        self.user = int(input('enter inter percentage'))
+        self.uu = 'the inter percentage'
+        self.fun11()
+        if self.user >=70:
+            self.user = input('enter tech degree')
+            self.uu = 'the tech degre'
+            self.fun11()
+            if self.user == 'ece':
+                self.user = int(input('enter pg percentage'))
+                self.fun11()
+                if self.user >= 60:
+                    print('you have selected')
+
+
+    def fun3(self):
+        self.user = input('enter tech degree percentage')
+        self.uu = 'the tech degree per'
+        self.fun11()
+        if int(self.user)>=70:
+            self.user = input('enter masters percentage')
+            self.uu = 'the masters perct'
+            self.fun11()
+            if int(self.user)>=60:
+                print('you have selected')
+        elif 60<=int(self.user)<70:
+            self.user=input('enter pg percentage')
+            self.uu = 'the pg perct'
+            self.fun11()
+            if int(self.user)>=60:
+                print('you have second priority')
+        elif int(self.user) < 60:
+            self.user = input('enter pg percentage')
+            self.uu = 'the pg perct'
+            self.fun11()
+            if int(self.user) >= 60:
+                print('you have third priority')
+
+    def fun11(self):
+        with open('y.txt', 'a') as q:
+            q.write('\n' +self.uu)        
+            q.write(' '+self.user)
+            
+    
+obj=Job()
+obj.secondary()
